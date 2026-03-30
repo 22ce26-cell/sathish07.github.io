@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sathish Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    background: #f5f5f5;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 300px;
+    background: #0f4c5c;
+    color: white;
+    height: 100vh;
+    position: fixed;
+    padding: 20px;
+    text-align: center;
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: white;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.profile-img img {
+    width: 100%;
+}
+
+.sidebar h2 {
+    margin: 10px 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.sidebar ul li:hover {
+    background: #1b6b7a;
+    transform: translateX(5px);
+}
+
+/* Main Content */
+.main {
+    margin-left: 300px;
+    padding: 40px;
+    width: 100%;
+}
+
+.section {
+    margin-bottom: 50px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 0.6s;
+}
+
+.section.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    margin-bottom: 10px;
+    color: #0f4c5c;
+}
+
+/* Cards */
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+/* Skills */
+.skill {
+    margin: 10px 0;
+}
+
+.bar {
+    height: 8px;
+    background: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.bar span {
+    display: block;
+    height: 100%;
+    background: #0f4c5c;
+    width: 0;
+    transition: 1s;
+}
+
+/* Contact */
+.contact p {
+    margin: 5px 0;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
+    .main {
+        margin-left: 0;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+    <div class="profile-img">
+        <!-- Replace with your image -->
+        <img src="your-photo.jpg" alt="profile">
+    </div>
+
+    <h2>Muddapati Gnana Sathish</h2>
+
+    <ul>
+        <li onclick="scrollToSection('about')">About</li>
+        <li onclick="scrollToSection('education')">Education</li>
+        <li onclick="scrollToSection('skills')">Skills</li>
+        <li onclick="scrollToSection('experience')">Experience</li>
+        <li onclick="scrollToSection('achievements')">Achievements</li>
+        <li onclick="scrollToSection('contact')">Contact</li>
+    </ul>
+</div>
+
+<!-- Main Content -->
+<div class="main">
+
+    <div id="about" class="section">
+        <h1>About Me</h1>
+        <div class="card">
+            <p>
+                I am a student at Anna University Regional Campus Coimbatore 
+                in Artificial Intelligence and Data Science. I completed my 
+                diploma in Computer Engineering at Sri Durgadevi Polytechnic College.
+            </p>
+        </div>
+    </div>
+
+    <div id="education" class="section">
+        <h1>Education</h1>
+        <div class="card">
+            <h3>Anna University</h3>
+            <p>B.Tech AI & DS (2023–2027)</p>
+        </div>
+
+        <div class="card">
+            <h3>Sri Durgadevi Polytechnic</h3>
+            <p>Diploma in Computer Engineering (2022–2025)</p>
+        </div>
+    </div>
+
+    <div id="skills" class="section">
+        <h1>Skills</h1>
+
+        <div class="skill">
+            Python
+            <div class="bar"><span style="width: 80%"></span></div>
+        </div>
+
+        <div class="skill">
+            DBMS
+            <div class="bar"><span style="width: 70%"></span></div>
+        </div>
+
+        <div class="skill">
+            C/C++
+            <div class="bar"><span style="width: 75%"></span></div>
+        </div>
+
+        <div class="skill">
+            Java
+            <div class="bar"><span style="width: 65%"></span></div>
+        </div>
+
+        <div class="skill">
+            Communication
+            <div class="bar"><span style="width: 85%"></span></div>
+        </div>
+    </div>
+
+    <div id="experience" class="section">
+        <h1>Work Experience</h1>
+        <div class="card">
+            <h3>ARS Steels</h3>
+            <p><b>Internship (2025)</b></p>
+            <ul>
+                <li>Learned Data Analysis</li>
+                <li>Worked in IT operations</li>
+                <li>Managed servers and hardware systems</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="achievements" class="section">
+        <h1>Achievements</h1>
+        <div class="card">
+            <ul>
+                <li>1st Prize in Presentation</li>
+                <li>Completed multiple workshops & internships</li>
+                <li>Awarded for communication skills</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="contact" class="section contact">
+        <h1>Contact</h1>
+        <div class="card">
+            <p>📞 9043049556</p>
+            <p>📧 muddapatignanasaithish@gmail.com</p>
+            <p>📍 Tiruvallur District</p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+// Scroll navigation
+function scrollToSection(id) {
+    document.getElementById(id).scrollIntoView({behavior: 'smooth'});
+}
+
+// Scroll animation
+const sections = document.querySelectorAll('.section');
+
+window.addEventListener('scroll', () => {
+    sections.forEach(sec => {
+        const top = sec.getBoundingClientRect().top;
+        if(top < window.innerHeight - 100) {
+            sec.classList.add('active');
+        }
+    });
+});
+</script>
+
+</body>
+</html>
