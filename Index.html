@@ -15,6 +15,35 @@
     font-family: 'Poppins', sans-serif;
 }
 
+    body {
+    margin: 0;
+    font-family: Arial;
+}
+
+.sidebar {
+    width: 100%;
+    background: #111;
+    color: white;
+    padding: 20px;
+}
+
+.main {
+    width: 100%;
+    padding: 20px;
+}
+
+/* Desktop view */
+@media (min-width: 768px) {
+    .sidebar {
+        width: 250px;
+        height: 100vh;
+        position: fixed;
+    }
+
+    .main {
+        margin-left: 260px;
+    }
+}
 body {
     display: flex;
     background: #f5f5f5;
