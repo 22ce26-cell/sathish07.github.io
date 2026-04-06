@@ -285,16 +285,149 @@ h3 {
             <p>📍 Tiruvallur District</p>
         </div>
     </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sathish Portfolio</title>
 
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+        }
+
+        header {
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .section {
+            padding: 20px;
+            margin: 10px;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: 0.5s;
+        }
+
+        .section.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .card {
+            background: white;
+            padding: 15px;
+            margin-top: 10px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .skill {
+            margin: 10px 0;
+        }
+
+        .bar {
+            background: #ddd;
+            height: 10px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .bar span {
+            display: block;
+            height: 100%;
+            background: #4CAF50;
+        }
+
+        .contact {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Sathish</h1>
+    <p>Diploma Computer Engineering Student</p>
+</header>
+
+<div class="section">
+    <h1>Education</h1>
+    <div class="card">
+        <h3>Sri Durgadevi Polytechnic</h3>
+        <p>Diploma in Computer Engineering (2022–2025)</p>
+    </div>
+</div>
+
+<div class="section">
+    <h1>Skills</h1>
+
+    <div class="skill">
+        Python
+        <div class="bar"><span style="width: 80%"></span></div>
+    </div>
+
+    <div class="skill">
+        DBMS
+        <div class="bar"><span style="width: 70%"></span></div>
+    </div>
+
+    <div class="skill">
+        C/C++
+        <div class="bar"><span style="width: 75%"></span></div>
+    </div>
+
+    <div class="skill">
+        Java
+        <div class="bar"><span style="width: 65%"></span></div>
+    </div>
+
+    <div class="skill">
+        Communication
+        <div class="bar"><span style="width: 85%"></span></div>
+    </div>
+</div>
+
+<div class="section">
+    <h1>Work Experience</h1>
+    <div class="card">
+        <h3>ARS Steels</h3>
+        <p><b>Internship (2025)</b></p>
+        <ul>
+            <li>Learned Data Analysis</li>
+            <li>Worked in IT operations</li>
+            <li>Managed servers and hardware systems</li>
+        </ul>
+    </div>
+</div>
+
+<div class="section">
+    <h1>Achievements</h1>
+    <div class="card">
+        <ul>
+            <li>1st Prize in Presentation</li>
+            <li>Completed multiple workshops & internships</li>
+            <li>Awarded for communication skills</li>
+        </ul>
+    </div>
+</div>
+
+<div class="section contact">
+    <h1>Contact</h1>
+    <div class="card">
+        <p>📞 9043049556</p>
+        <p>📧 muddapatignanasaithish@gmail.com</p>
+        <p>📍 Tiruvallur District</p>
+    </div>
 </div>
 
 <script>
-// Scroll navigation
-function scrollToSection(id) {
-    document.getElementById(id).scrollIntoView({behavior: 'smooth'});
-}
-
-// Scroll animation
 const sections = document.querySelectorAll('.section');
 
 window.addEventListener('scroll', () => {
